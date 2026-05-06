@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memories — Onyibo & Ezeani</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="memories.html" class="active">Memories</a>
+    <a href="music.html">Music</a>
+    <a href="message.html">Message</a>
+    <a href="reasons.html">Reasons</a>
+    <a href="eyes-only.html">Our Eyes Only</a>
+  </div>
+</nav>
+
+<div class="page">
+<div class="container">
+
+  <div class="page-header fade-in">
+    <h2>Our Memories</h2>
+    <p>Every photo, every video — every moment we chose to keep.</p>
+  </div>
+
+  <div class="card fade-in" style="padding:14px;">
+    <div class="sec-label" style="padding:4px 4px 12px;">Photos & Videos</div>
+    <div class="gallery-grid" id="gallery"></div>
+  </div>
+
+</div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb">
+  <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+  <button class="lb-nav lb-prev" onclick="lbMove(-1)">&#8249;</button>
+  <div id="lbMedia"></div>
+  <button class="lb-nav lb-next" onclick="lbMove(1)">&#8250;</button>
+  <div class="lb-footer">
+    <div class="lb-dots" id="lbDots"></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  buildGallery('gallery', PUBLIC_IMAGES, PUBLIC_VIDEOS);
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Eyes Only — Onyibo & Ezeani</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="memories.html">Memories</a>
+    <a href="music.html">Music</a>
+    <a href="message.html">Message</a>
+    <a href="reasons.html">Reasons</a>
+    <a href="eyes-only.html" class="active">Our Eyes Only</a>
+  </div>
+</nav>
+
+<div class="page">
+<div class="container">
+
+  <div class="lock-section fade-in" id="lockSection">
+    <div class="lock-ico" id="lockIco">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.5">
+        <rect x="3" y="11" width="18" height="11" rx="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    </div>
+    <div class="lock-title" id="lockTitle">Our Eyes Only</div>
+    <div class="lock-sub" id="lockSub">This space belongs to just the two of us.<br>Enter the code to step inside.</div>
+    <div class="pin-row" id="pinRow">
+      <input class="pin-inp" id="p1" maxlength="1" inputmode="numeric" type="tel">
+      <input class="pin-inp" id="p2" maxlength="1" inputmode="numeric" type="tel">
+      <input class="pin-inp" id="p3" maxlength="1" inputmode="numeric" type="tel">
+      <input class="pin-inp" id="p4" maxlength="1" inputmode="numeric" type="tel">
+    </div>
+    <button class="unlock-btn" id="unlockBtn" onclick="doUnlock()">Unlock</button>
+    <div class="pin-err" id="pinErr">Wrong code — try again.</div>
+
+    <div class="private-area" id="privArea">
+      <div class="priv-head">
+        <div class="priv-title">Private memories</div>
+        <div class="priv-badge">just us</div>
+      </div>
+      <div class="priv-grid" id="privGrid"></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb">
+  <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+  <button class="lb-nav lb-prev" onclick="lbMove(-1)">&#8249;</button>
+  <div id="lbMedia"></div>
+  <button class="lb-nav lb-next" onclick="lbMove(1)">&#8250;</button>
+  <div class="lb-footer">
+    <div class="lb-dots" id="lbDots"></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  initPin(['p1','p2','p3','p4'], '0506', onUnlocked);
+
+  function doUnlock() {
+    checkPin(['p1','p2','p3','p4'], '0506', onUnlocked);
+  }
+
+  function onUnlocked() {
+    document.getElementById('lockIco').innerHTML =
+      `<svg viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>`;
+    document.getElementById('lockTitle').textContent = 'Welcome in ♥';
+    document.getElementById('lockSub').style.display = 'none';
+    document.getElementById('pinRow').style.display = 'none';
+    document.getElementById('unlockBtn').style.display = 'none';
+    buildPrivateGallery('privGrid');
+    document.getElementById('privArea').classList.add('open');
+  }
+</script>
+</body>
+</html>

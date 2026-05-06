@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onyibo & Ezeani — 2 Years</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="active">Home</a>
+    <a href="pages/story.html">Our Story</a>
+    <a href="pages/memories.html">Memories</a>
+    <a href="pages/music.html">Music</a>
+    <a href="pages/message.html">Message</a>
+    <a href="pages/reasons.html">Reasons</a>
+    <a href="pages/eyes-only.html">Our Eyes Only</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-stars" id="stars"></div>
+  <div class="hero-eyebrow">two years of us · may 6</div>
+  <h1>Onyibo<br><em>&amp; Ezeani</em></h1>
+  <p class="hero-sub">May 6, 2024 — and every day after</p>
+  <div class="hline">
+    <svg class="heart-svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  </div>
+  <div class="countdown" id="cd"></div>
+</div>
+
+<div class="page">
+<div class="container">
+
+  <div class="welcome-card fade-in">
+    <p>"Two years ago, something quietly extraordinary happened —<br>
+    you walked into my life and made it make sense."</p>
+    <div class="sig">— Nkem, for Goliath Grooper</div>
+  </div>
+
+  <div class="card fade-in" style="text-align:center;padding:28px 22px;">
+    <div class="sec-label" style="margin-bottom:14px;">explore</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <a href="pages/story.html" style="text-decoration:none;">
+        <div style="padding:18px 12px;background:var(--bg2);border-radius:var(--radius-sm);transition:background .2s;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'">
+          <div style="font-size:22px;margin-bottom:6px;">✨</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);">Our Story</div>
+          <div style="font-size:11px;color:var(--hint);margin-top:2px;">The journey so far</div>
+        </div>
+      </a>
+      <a href="pages/memories.html" style="text-decoration:none;">
+        <div style="padding:18px 12px;background:var(--bg2);border-radius:var(--radius-sm);transition:background .2s;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'">
+          <div style="font-size:22px;margin-bottom:6px;">🖼️</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);">Memories</div>
+          <div style="font-size:11px;color:var(--hint);margin-top:2px;">Photos & videos</div>
+        </div>
+      </a>
+      <a href="pages/message.html" style="text-decoration:none;">
+        <div style="padding:18px 12px;background:var(--bg2);border-radius:var(--radius-sm);transition:background .2s;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'">
+          <div style="font-size:22px;margin-bottom:6px;">💌</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);">Message</div>
+          <div style="font-size:11px;color:var(--hint);margin-top:2px;">Words from the heart</div>
+        </div>
+      </a>
+      <a href="pages/reasons.html" style="text-decoration:none;">
+        <div style="padding:18px 12px;background:var(--bg2);border-radius:var(--radius-sm);transition:background .2s;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'">
+          <div style="font-size:22px;margin-bottom:6px;">💝</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);">50 Reasons</div>
+          <div style="font-size:11px;color:var(--hint);margin-top:2px;">Why I love you</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  makeStars();
+  startCountdown();
+</script>
+</body>
+</html>
