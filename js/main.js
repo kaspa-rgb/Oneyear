@@ -1,27 +1,33 @@
-// ── MEDIA ──────────────────────────────────────────
+// ── ALL MEDIA IDs (fetched directly from Google Drive) ─────────────────────
+
 const PUBLIC_IMAGES = [
-  '1LuWulTF4Mz-tHljBRVUrFNsvx8jJvBfw','1kwgQxhof_QZ6RbeD1bYMwtgd8sakzX-O',
-  '18AfhfcyKDGeG27XRumtjYwQoJLijZA4w','1aDFIKi0uJ5jMCwZABeGVYGE8hsx1E1xQ',
-  '1pcqCRqH_3TyK-JBv_aMT2L5T42ShOyG6','1s1bqdOR3hL4qxzqMngy53t61CoqmlgwD',
-  '1PV84dThagXmDF7vXv-M6L9ST6g3CfgxM','1hToSHKPzYaaMA6_IG19F_ZoAHjvY3MWn',
-  '1wugbhkRc8Z8iWTj5Z1nFggjPc_IjRQBl','1bD91Hnboohvd0em-rmcZoYYH4LH-BL-L',
-  '16oWpREfupcuBwcLgcU51ULW18WzFWOpS','17E4zT7SNquGWjl6Ex4RM8Ft6rVKHv3gQ',
-  '1ij4KUjc3WavOgWFwVfyoX6YzYYmO4QyD','18YJ3W7u2savhC5zSpwKCDTMF0dgLniXD',
-  '1va7KayC1qaKVux3oIPo3Emp07KrBkmPM','1aPQGIuRh5H7yM43BBQG2om3E19DgIasJ',
-  '1MUZUHG1QFPph6u4dl4JGhDcmIjy7Vygb','1YI9ZW2ImbQ8D48_BrVSjWKur7ZVqn2ti',
-  '1yh1NJDomEWHdljIGDc7VHyPJhOGIaQhk','1LjldHB5TgogW1ktcL_c9ERQT9r83wi-R',
-  '1ZDahhAj3Ef713HrfWfSw3tVXbYyivRok','1p4RB_dguJvknQUlAlrVx0hBsTHja9mvz',
-  '1U0Ujdxt74fOfMLy8V2CGp43JOFln6YHy','11w9xGGs87kQwvOM9gcaauWTcORNM7GAU',
-  '1kSuBTdCCm0xS6uMOdjg71UbYMyruziwb','1uYR4e4SBir8C1SKianrUMrY3b2QeDzIO',
-  '17yE2vByTikpA5SczB5Uc8JIJiy1uxUjb','1T7MbKOVwwAYkDew_9IuPgJ5e0AAq69XP',
-  '1LAOcvMQeDOqmyDDtxBKgh9T_lwZuvFrA'
+  '17E4zT7SNquGWjl6Ex4RM8Ft6rVKHv3gQ','1ij4KUjc3WavOgWFwVfyoX6YzYYmO4QyD',
+  '18YJ3W7u2savhC5zSpwKCDTMF0dgLniXD','1va7KayC1qaKVux3oIPo3Emp07KrBkmPM',
+  '1aPQGIuRh5H7yM43BBQG2om3E19DgIasJ','1MUZUHG1QFPph6u4dl4JGhDcmIjy7Vygb',
+  '1YI9ZW2ImbQ8D48_BrVSjWKur7ZVqn2ti','1yh1NJDomEWHdljIGDc7VHyPJhOGIaQhk',
+  '1LjldHB5TgogW1ktcL_c9ERQT9r83wi-R','1LuWulTF4Mz-tHljBRVUrFNsvx8jJvBfw',
+  '1kwgQxhof_QZ6RbeD1bYMwtgd8sakzX-O','18AfhfcyKDGeG27XRumtjYwQoJLijZA4w',
+  '1aDFIKi0uJ5jMCwZABeGVYGE8hsx1E1xQ','1pcqCRqH_3TyK-JBv_aMT2L5T42ShOyG6',
+  '1s1bqdOR3hL4qxzqMngy53t61CoqmlgwD','1PV84dThagXmDF7vXv-M6L9ST6g3CfgxM',
+  '1T7MbKOVwwAYkDew_9IuPgJ5e0AAq69XP','1ZDahhAj3Ef713HrfWfSw3tVXbYyivRok',
+  '17yE2vByTikpA5SczB5Uc8JIJiy1uxUjb','1p4RB_dguJvknQUlAlrVx0hBsTHja9mvz',
+  '1U0Ujdxt74fOfMLy8V2CGp43JOFln6YHy','1uYR4e4SBir8C1SKianrUMrY3b2QeDzIO',
+  '11w9xGGs87kQwvOM9gcaauWTcORNM7GAU','1kSuBTdCCm0xS6uMOdjg71UbYMyruziwb',
+  '16oWpREfupcuBwcLgcU51ULW18WzFWOpS','1bD91Hnboohvd0em-rmcZoYYH4LH-BL-L',
+  '1wugbhkRc8Z8iWTj5Z1nFggjPc_IjRQBl','1hToSHKPzYaaMA6_IG19F_ZoAHjvY3MWn',
+  '1LAOcvMQeDOqmyDDtxBKgh9T_lwZuvFrA','1_hKkVW7NeQicAGnDosDFcKfecRAPwBec',
+  '1HVcjHnHJWOjZ2BYYOCynosYyX_wLvI8B','1GL5FbhhtiQ1pb6LkNa10DNz6OUKYnGx-',
+  '1IBvM1QRZtZedCSFzDR5yH9yyBRpJ98l_','1rQ4JuPMDRRv1mr33buK36Kyhk401U69g',
+  '1DX37THMvh4xdK6L66Ust46RUCPFrWWkF','1FCAcvfx5W8bMTDZ6a1U38Y6pPp7XTj2q',
+  '1dvMhsRzwfbJU7NzPNF4gSDROGWHZ0zyQ','1Etd9fr29Z17OcoKs-XNMM1zoinJGBKsc',
+  '1wHXcrtPID5_J3RBinGh61-45e5FgH3LE','1qZGFFNK-mpm4N9r5JjdhqOzwOHBIHRB4'
 ];
 
 const PUBLIC_VIDEOS = [
-  '1-k9UgXr3NTiRRlfrrW4lvmzjqTc-WY7s','1eONeN-uiUdOfVjA7LZcAt4ED5FtLdsu1',
-  '1U1WC3qDlKusaDqewjDW6FUVtjlKe69d3','1L27ktvikhz59jycEVIFOR77FvTlscflP',
-  '1ryY8Lbv44TNu1VI1aCnu67ZHrH7EYebU','1pUzT4d9cvYeJC2is8ZDby9RNr8sZNrKc',
-  '137uHLq7SErALgrF1pyjkzzzGvKqQMgzC','1l1rQ2Pct4ksf5FMqQBZkcUFzdsLmpM1x',
+  '137uHLq7SErALgrF1pyjkzzzGvKqQMgzC','1-k9UgXr3NTiRRlfrrW4lvmzjqTc-WY7s',
+  '1l1rQ2Pct4ksf5FMqQBZkcUFzdsLmpM1x','1eONeN-uiUdOfVjA7LZcAt4ED5FtLdsu1',
+  '1pUzT4d9cvYeJC2is8ZDby9RNr8sZNrKc','1U1WC3qDlKusaDqewjDW6FUVtjlKe69d3',
+  '1L27ktvikhz59jycEVIFOR77FvTlscflP','1ryY8Lbv44TNu1VI1aCnu67ZHrH7EYebU',
   '1s_2qwkty6xka-_cZixbdph3WrfkAM1sD','1OSYR3tuEq3VwrTkLXrIswnqn5cLGI0wY',
   '1uN0eWbeBZWfnETe8SfFeb39jT_RZ9Z4U','1N3rw144Gj2GI_dF6-C3XsljKnKmqUm8N',
   '1MKtKOJvB5OG8sVjBJ508YkVfGYRt5eBP','1F3SA8xVoW1Bwbi26Pc7cSk_NG7VaHeZc',
@@ -32,31 +38,32 @@ const PUBLIC_VIDEOS = [
 ];
 
 const PRIV_IMAGES = [
-  '1JAzb8GIAFEgH93e3YSXcrqnU1B50rgfC','1uu-PZkz3IWkWE25XyRfbBZDIxtQFrlB-',
-  '1QzObxJy7bwOjuNcM0M7SDdkTzNLer0ta','1NM1CxzyDWt7Lm2XAO24jbnCkamn7fucf',
-  '1eks7Unw8MdmYfkWhb97hRMiG37L4WU7a','1_oHGcjcXI90NuMmdjabIhAR_gpy1ru0z',
+  '1eks7Unw8MdmYfkWhb97hRMiG37L4WU7a','1JAzb8GIAFEgH93e3YSXcrqnU1B50rgfC',
+  '1uu-PZkz3IWkWE25XyRfbBZDIxtQFrlB-','1QzObxJy7bwOjuNcM0M7SDdkTzNLer0ta',
+  '1NM1CxzyDWt7Lm2XAO24jbnCkamn7fucf','1_oHGcjcXI90NuMmdjabIhAR_gpy1ru0z',
   '1BrBdVQZFuGR3GAX6wsCmgNxwgntquIP3','1c4mJ4xKQ2n0qkLc2GebIVqQgQdY5611B',
   '13M6XBv8QNslhgXko0_0r5L0yoJ0zfrjb','1XUxrNiCNDjPutz4DMspcavBT5wlA0BZu',
-  '1-v_ZyCIb9RFSfmErGECjNxHn5M2akyqw','12A1ZZWps5bjLIue19CgxRZP7mQ5D8B6I',
-  '1fRNo812l4gEvyDNk7UWCODRuAzIv7Cru'
+  '1-v_ZyCIb9RFSfmErGECjNxHn5M2akyqw','1fRNo812l4gEvyDNk7UWCODRuAzIv7Cru',
+  '12A1ZZWps5bjLIue19CgxRZP7mQ5D8B6I'
 ];
 
 const PRIV_VIDEOS = [
-  '1EBKgzMU4-XiwERxoEWQIZRPqZ5FD65nV','1El7QXayYDeESW8zzKdbcCeTsAKDRMJyl',
-  '1KTNcLUagD5NKBzwyxsnhWcIQXnaSI348','1QQ_Nqdzq7NgE939P_Qh3WOgIeuGjvl_P',
-  '1z3Fet-Zk-eTvt_l1NXGLUDFT3dykLEe4','1uJa5fJ1iTKF7e1OmzosNWqAHIShsHlS6',
-  '1ugYwJkjm1a8vqmi1ezdVv1HtBKeBxAkh','1Xe0kGOXilOsV4StbRXeG0_4ynpEQ92go',
-  '1dy_5tfZO-YH2k0A-6kKuKhhCrQAQJtTG','1nkdfdUeLTZj2KOTphzla8LKLVfqW-AgH',
-  '1YIf1nbYCuutYLvlcSB_55fTX93Sc4Wrv','1K22llL3Iu13UghyL6c6ZRY2weUYuU5_a',
-  '10v1sJtXLKuyAsT-2QXeUNcYu5UtUwuvq','19w2z0VYRKm9e5a6kOvMSq5K3h1PRKlGA',
-  '1jkcEoilgA26AAdgqsXkA_hcQyPxRrITU','1gHAaL9ZBjmnLjfTMXAaWMYjBAqBhGi0p'
+  '19w2z0VYRKm9e5a6kOvMSq5K3h1PRKlGA','10v1sJtXLKuyAsT-2QXeUNcYu5UtUwuvq',
+  '1K22llL3Iu13UghyL6c6ZRY2weUYuU5_a','1YIf1nbYCuutYLvlcSB_55fTX93Sc4Wrv',
+  '1nkdfdUeLTZj2KOTphzla8LKLVfqW-AgH','1dy_5tfZO-YH2k0A-6kKuKhhCrQAQJtTG',
+  '1Xe0kGOXilOsV4StbRXeG0_4ynpEQ92go','1ugYwJkjm1a8vqmi1ezdVv1HtBKeBxAkh',
+  '1uJa5fJ1iTKF7e1OmzosNWqAHIShsHlS6','1z3Fet-Zk-eTvt_l1NXGLUDFT3dykLEe4',
+  '1QQ_Nqdzq7NgE939P_Qh3WOgIeuGjvl_P','1KTNcLUagD5NKBzwyxsnhWcIQXnaSI348',
+  '1El7QXayYDeESW8zzKdbcCeTsAKDRMJyl','1EBKgzMU4-XiwERxoEWQIZRPqZ5FD65nV',
+  '1gHAaL9ZBjmnLjfTMXAaWMYjBAqBhGi0p','1jkcEoilgA26AAdgqsXkA_hcQyPxRrITU'
 ];
 
-// ── HELPERS ────────────────────────────────────────
-function thumb(id)      { return `https://lh3.googleusercontent.com/d/${id}`; }
+// ── HELPERS ────────────────────────────────────────────────────────────────
+// Using uc?export=view — most reliable for publicly shared Drive files
+function thumb(id)      { return `https://drive.google.com/uc?export=view&id=${id}`; }
 function vidPreview(id) { return `https://drive.google.com/file/d/${id}/preview`; }
 
-// ── LIGHTBOX ───────────────────────────────────────
+// ── LIGHTBOX ───────────────────────────────────────────────────────────────
 let lbItems = [], lbIdx = 0;
 
 function openLb(items, i) {
@@ -93,9 +100,7 @@ function closeLb() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const lb = document.getElementById('lb');
-  if (lb) {
-    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-  }
+  if (lb) lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
 });
 
 document.addEventListener('keydown', e => {
@@ -105,7 +110,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape')     closeLb();
 });
 
-// ── STARS ──────────────────────────────────────────
+// ── STARS ──────────────────────────────────────────────────────────────────
 function makeStars(containerId = 'stars', count = 50) {
   const c = document.getElementById(containerId);
   if (!c) return;
@@ -118,7 +123,7 @@ function makeStars(containerId = 'stars', count = 50) {
   }
 }
 
-// ── COUNTDOWN ──────────────────────────────────────
+// ── COUNTDOWN ──────────────────────────────────────────────────────────────
 function startCountdown(elId = 'cd') {
   function tick() {
     const target = new Date('2026-05-06T00:00:00');
@@ -140,7 +145,7 @@ function startCountdown(elId = 'cd') {
   tick(); setInterval(tick, 1000);
 }
 
-// ── QR ─────────────────────────────────────────────
+// ── QR CODE ────────────────────────────────────────────────────────────────
 function makeQR(elId, url) {
   if (typeof QRCode === 'undefined') return;
   new QRCode(document.getElementById(elId), {
@@ -150,7 +155,7 @@ function makeQR(elId, url) {
   });
 }
 
-// ── PIN / UNLOCK ───────────────────────────────────
+// ── PIN / UNLOCK ───────────────────────────────────────────────────────────
 function initPin(ids, code, onSuccess) {
   ids.forEach((id, i, arr) => {
     const el = document.getElementById(id);
@@ -174,23 +179,28 @@ function checkPin(ids, code, onSuccess) {
     onSuccess();
   } else {
     err?.classList.add('show');
-    ids.forEach(id => { document.getElementById(id).value = ''; document.getElementById(id).classList.remove('ok'); });
+    ids.forEach(id => {
+      document.getElementById(id).value = '';
+      document.getElementById(id).classList.remove('ok');
+    });
     document.getElementById(ids[0]).focus();
   }
 }
 
-// ── GALLERY BUILDER ────────────────────────────────
-function buildGallery(containerId, imgIds, vidIds, maxItems = 999) {
+// ── GALLERY BUILDER ────────────────────────────────────────────────────────
+function buildGallery(containerId, imgIds, vidIds) {
   const g = document.getElementById(containerId);
   if (!g) return;
   const imgs = imgIds.map(id => ({type:'img', id}));
   const vids = vidIds.map(id => ({type:'vid', id}));
-  const items = [...imgs, ...vids].sort(() => Math.random() - .5).slice(0, maxItems);
+  const items = [...imgs, ...vids].sort(() => Math.random() - .5);
   items.forEach((item, i) => {
     const d = document.createElement('div');
     d.className = 'g-item';
     d.innerHTML = `<img src="${thumb(item.id)}" loading="lazy" alt="memory">` +
-      (item.type === 'vid' ? `<div class="vid-badge"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>vid</div>` : '');
+      (item.type === 'vid'
+        ? `<div class="vid-badge"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>vid</div>`
+        : '');
     d.onclick = () => openLb(items, i);
     g.appendChild(d);
   });
@@ -218,12 +228,12 @@ function buildPrivateGallery(containerId) {
   });
 }
 
-// ── NAV ACTIVE STATE ───────────────────────────────
+// ── NAV ACTIVE STATE ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  const path = window.location.pathname.replace(/\/$/, '') || '/index';
+  const path = window.location.pathname;
   document.querySelectorAll('.nav a').forEach(a => {
-    const href = a.getAttribute('href').replace(/\/$/, '') || '/index';
-    if (path.endsWith(href) || (path === '' && href === '/index') || (path === '/' && href === '/index')) {
+    const href = a.getAttribute('href');
+    if (path.endsWith(href) || (path === '/' && href === 'index.html') || (path.endsWith('/') && href === 'index.html')) {
       a.classList.add('active');
     }
   });
