@@ -378,3 +378,82 @@ body {
 .fade-in:nth-child(3) { animation-delay: .19s; }
 .fade-in:nth-child(4) { animation-delay: .26s; }
 .fade-in:nth-child(5) { animation-delay: .33s; }
+
+/* ── MOBILE RESPONSIVE ─────────────────── */
+@media (max-width: 520px) {
+
+  /* Nav — horizontally scrollable */
+  .nav { justify-content: flex-start; }
+  .nav-inner {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 12px;
+    gap: 2px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav a { font-size: 11px; padding: 5px 10px; white-space: nowrap; flex-shrink: 0; }
+
+  /* Hero */
+  .hero { padding: 52px 16px 40px; }
+  .hero h1 { font-size: 32px; }
+  .hline::before, .hline::after { width: 32px; }
+
+  /* Countdown */
+  .countdown { gap: 6px; }
+  .cd-box { padding: 8px 8px; min-width: 44px; }
+  .cd-n { font-size: 18px; }
+  .cd-l { font-size: 8px; letter-spacing: .06em; }
+
+  /* Container & cards */
+  .container { padding: 0 12px; }
+  .card { padding: 18px 14px; }
+
+  /* Music card — stack vertically */
+  .music-card { flex-wrap: wrap; padding: 16px; gap: 12px; }
+  .music-info { flex: 1 1 60%; min-width: 0; }
+  .music-title { font-size: 14px; }
+  .qr-wrap { width: 100%; flex-direction: row; align-items: center; gap: 12px; }
+  .qr-box { width: 58px; height: 58px; }
+  .qr-box canvas, .qr-box img { width: 54px !important; height: 54px !important; }
+  .qr-lbl { font-size: 11px; }
+
+  /* Timeline */
+  .tl-row { grid-template-columns: 40px 12px 1fr; gap: 0 8px; }
+  .tl-title { font-size: 15px; }
+  .tl-desc { font-size: 12px; }
+  .tl-note { font-size: 11px; }
+
+  /* Gallery */
+  .gallery-grid { gap: 3px; }
+  .priv-grid { gap: 3px; }
+
+  /* Lock / pin */
+  .lock-section { padding: 32px 14px; }
+  .pin-row { gap: 8px; }
+  .pin-inp { width: 42px; height: 50px; font-size: 20px; }
+  .lock-title { font-size: 20px; }
+  .lock-sub { font-size: 12px; }
+
+  /* Message */
+  .message-wrap { padding: 28px 16px; }
+  .message-text { font-size: 16px; line-height: 1.8; }
+
+  /* Page header */
+  .page-header { padding: 28px 0 20px; }
+  .page-header h2 { font-size: 26px; }
+
+  /* Reasons */
+  .reason-item { padding: 10px 10px; }
+  .reason-text { font-size: 13px; }
+  .reason-num { font-size: 12px; min-width: 24px; }
+
+  /* Welcome card */
+  .welcome-card { padding: 24px 18px; }
+  .welcome-card p { font-size: 15px; }
+
+  /* Explore grid — already 2 cols, just tighten */
+  .page-header + .card div[style*="grid"] { gap: 6px !important; }
+}
