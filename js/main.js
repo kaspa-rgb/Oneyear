@@ -60,7 +60,7 @@ const PRIV_VIDEOS = [
 
 // ── HELPERS ────────────────────────────────────────────────────────────────
 // Using uc?export=view — most reliable for publicly shared Drive files
-function thumb(id)      { return `https://drive.google.com/uc?export=view&id=${id}`; }
+function thumb(id) { return `https://lh3.googleusercontent.com/d/${id}`; }
 function vidPreview(id) { return `https://drive.google.com/file/d/${id}/preview`; }
 
 // ── LIGHTBOX ───────────────────────────────────────────────────────────────
